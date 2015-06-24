@@ -18,7 +18,7 @@ body {
 	border-radius: 13px;
 }
 
-frame {
+.frame {
 	width:95%;
 	margin:0 auto;
 	display:block;
@@ -32,4 +32,10 @@ frame {
 .buttons {
 	background: #80cbc4;
 	height: 330px;
+	padding: 1em 8em;
+	text-align: center;
+}
+
+.buttons a {
+	margin: 1em;
 }
