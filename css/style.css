@@ -26,14 +26,18 @@ body {
 }
 
 .readout {
-	margin-top: 3em;
-	background: white;
+	padding-top: 5em;
 	text-align: center;
 }
 
 .readout p {
-	margin: 1em;
 	display: inline;
+	margin-left: 10px;
+	padding: 1px 10px;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+	background-color: black;
 }
 
 .input {
