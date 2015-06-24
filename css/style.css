@@ -14,6 +14,7 @@ body {
 .phoneFrame {
 	width: 640px;
 	margin: 0 auto;
+	padding: 1em 0;
 	background: black;
 	border-radius: 13px;
 }
@@ -23,16 +24,28 @@ body {
 	margin:0 auto;
 	display:block;
 }
+
+.readout {
+	margin-top: 3em;
+	background: white;
+	text-align: center;
+}
+
+.readout p {
+	margin: 1em;
+	display: inline;
+}
+
 .input {
 	margin-top: 15px;
 	background: #e0f7fa;
-	height:300px;
+	height: 200px;
 }
 
 .buttons {
 	background: #80cbc4;
-	height: 330px;
-	padding: 1em 8em;
+	height: 430px;
+	padding: 1em 10em;
 	text-align: center;
 }
 
