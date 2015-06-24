@@ -1,0 +1,35 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: lightgrey;
+}
+
+.mainContainer {
+	width:100%;
+}
+
+.phoneFrame {
+	width: 640px;
+	margin: 0 auto;
+	background: black;
+	border-radius: 13px;
+}
+
+frame {
+	width:95%;
+	margin:0 auto;
+	display:block;
+}
+.input {
+	margin-top: 15px;
+	background: #e0f7fa;
+	height:300px;
+}
+
+.buttons {
+	background: #80cbc4;
+	height: 330px;
+}
