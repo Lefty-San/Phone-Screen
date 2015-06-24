@@ -4,37 +4,41 @@ var entry = [],
     notes = [],
     winnerText = $(".notify");
 
+
+for (i=0; i<4; i++){
+	$(".num" + (i+1)).hide();
+}
+
 winnerText.hide();
 
 $("a").click(function(e){
-	// var chk = $(this).hasClass("pressed"),
 	   var ths = $(this)
 	   var num = ths.text();
-	// if ( !chk ) {
-	// 	ths.addClass("pressed");
-	// }
 	combo.plus(num);
-	$(".num1").text(entry[0]);
-	$(".num2").text(entry[1]);
-	$(".num3").text(entry[2]);
-	$(".num4").text(entry[3]);
-	console.log(entry[0]);
-	console.log(entry);
+
+	for (i=4; i>entry.length; i--){
+		$(".num" + (i+1)).hide();
+	}
+
+	for (i=0; i<entry.length; i++){
+		$(".num" + (i+1)).show();
+	}
 });
+
+for (i=0; i<entry.length; i++){
+	$(".num" + (i+1)).show();
+}
 
 combo.plus = function(t) {
 	winner = false;
 	entry.push(t);
-	if (entry.length > 4) {
+	if (entry.length >4){
+		entry.length = 1;
+}
+	console.log(entry);
+	if (entry.length > 3) {
 		combo.check();
 		//update notepad
-		$(".notepad").append("<p>" + entry + "</p>");
-		if ($(".notepad p").length > 5){
-			notes.rem();
-		}
-		//clear for new game
-		$("article").removeClass("pressed");
-		entry.length = 0;
 	}
 }
 
@@ -44,10 +48,13 @@ combo.check = function() {
 		if (entry[i] != right[i]){
 			winnerText.hide();
 			$(".notepad").show();
+			console.log("winner: \r" + winner);
 			return;
 		}
 	}
 	winner = true;
+	console.log("winner: \r" + winner);
+	entry.length = 0;
 	winnerText.show();
 	$(".notepad").hide();
 }
